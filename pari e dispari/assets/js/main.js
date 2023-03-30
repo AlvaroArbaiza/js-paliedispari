@@ -15,3 +15,19 @@ Pari e Dispari:
 
 // In base al risultato delle condizioni( un numero pari o dispari) dichiarerò il vincitore
 
+// Variabile che prende l'input #play
+let play = document.getElementById("play");
+
+let computer;
+
+// Funzione attivata al "click"
+play.addEventListener("click", function() {
+
+    function randoNumber() {
+        return Math.floor(Math.random() * 5) + 1;          
+    }
+
+    computer = randoNumber();
+
+    console.log( computer)
+} )
