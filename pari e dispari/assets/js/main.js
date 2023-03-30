@@ -18,16 +18,25 @@ Pari e Dispari:
 // Variabile che prende l'input #play
 let play = document.getElementById("play");
 
-let computer;
-
 // Funzione attivata al "click"
 play.addEventListener("click", function() {
 
+    // Variabile che prende il valore inserito dall'utente (Pari o dispari)
+    let pariDispari = document.getElementById("pariDispari").value;
+
+    // Variabile che prende il valore inserito dall'utente (Numero)
+    let player = document.getElementById("player").value;
+
+    // Variabile che prende il valore della Funzione( randoNumber() )
+    let computer = randoNumber();
+
+    // Funzione che crea un numero random da 1 a 5
     function randoNumber() {
         return Math.floor(Math.random() * 5) + 1;          
     }
 
-    computer = randoNumber();
+    console.log( pariDispari)
 
-    console.log( computer)
+    // Condizioni per decidere chi sarà il vincitore
+
 } )
