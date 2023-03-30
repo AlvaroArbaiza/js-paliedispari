@@ -13,7 +13,10 @@ let reversed;
 // Funzione che parte al click su "btn"
 button.addEventListener("click", function() {
     
+    // Variabile che prende il value dall'input #parola
+    let parola = document.getElementById("parola").value;
 
+    
 });
 
 
