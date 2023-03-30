@@ -4,29 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Pari e Dispari</title>
 </head>
 <body>
 
-    <div>
+    <div id="paper">
 
-        <label for="cars">Scegli pari o dispari</label>
-        <select name="cars" id="pariDispari">
-            <option value="pari">Pari</option>
-            <option value="dispari">Dispari</option>
-        </select>
-    </div>
-    
-    <div>
+        <div id="lines">
 
-        <label for="player">Scrivi un numero da 1 a 5</label>
-        <input name="player" type="text" id="player">
-
-        <input type="submit" id="play">
-    </div>
-
-    <div id="risultato">
-
+            <div>
+                <h1>
+                    <span class="red">Pari</span> o <span class="blue">Dispari!</span>
+                </h1>
+        
+                <h2>Regole da seguire:</h2>
+                <ul>
+                    <li>Scegli se la somma del tuo numero e quella del CPU sarà Pari o Dispari</li>
+                    <li>Scrivi un numero da 1 a 5</li>
+                    <li>Gioca e tenta la fortuna!</li>
+                </ul>
+            </div>
+        
+            <div>
+        
+                <label for="cars">Scegli pari o dispari:</label>
+                <select name="cars" id="pariDispari">
+                    <option value="pari">Pari</option>
+                    <option value="dispari">Dispari</option>
+                </select>
+            </div>
+            
+            <div>
+        
+                <label for="player">Scrivi un numero da 1 a 5</label>
+                <input name="player" type="text" id="player">
+        
+                <input type="submit" id="play" value="Gioca">
+            </div>
+        
+            <div id="risultato">
+        
+            </div>
+        </div>
+        <div id="holes">
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+        </div>
     </div>
 
     <script src="./assets/js/main.js"></script>

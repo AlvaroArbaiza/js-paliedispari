@@ -37,15 +37,19 @@ play.addEventListener("click", function() {
 
         document.getElementById("risultato").innerHTML = 
         `
-        <h3>Complimenti, hai vinto!</h3>
+        <h4><strong>Tu hai scelto: ${player}</strong></h4>
+        <h4><strong>Il computer ha scelto: ${computer}</strong></h4>
         <p>La somma dei due numeri è uguale a ${somma}</p>
+        <h2 class="red">Hai vinto!</h2>
         `;
     } else if ( somma % 2 !== 0 && pariDispari == "pari" || somma % 2 == 0 && pariDispari == "dispari" ) {
 
         document.getElementById("risultato").innerHTML = 
         `
-        <h3>Mi dispiace, hai perso!</h3>
+        <h4><strong>Tu hai scelto ${player}</strong></h4>
+        <h4><strong>Il computer ha scelto ${computer}</strong></h4>
         <p>La somma dei due numeri è uguale a ${somma}</p>
+        <h2 class="blue">Mi dispiace, hai perso!</h2>
         `;
     }
 
