@@ -15,6 +15,13 @@ button.addEventListener("click", function() {
     
     // Variabile che prende il value dall'input #parola
     let parola = document.getElementById("parola").value;
+    
+    /* Quando la parola viene inserita viene:
+        - scomposta( .split )
+        - cambiato l'ordine( .reverse() )
+        - ricomposta come parola unica ( .join("") )
+    */
+    reversed = parola.split("").reverse().join("");
 
     
 });
