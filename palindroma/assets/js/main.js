@@ -10,7 +10,11 @@ const button = document.getElementById("btn");
 
 let reversed;
 
+// Funzione che parte al click su "btn"
+button.addEventListener("click", function() {
+    
 
+});
 
 
 
