@@ -7,14 +7,6 @@ Pari e Dispari:
     - Dichiariamo chi ha vinto.
 */
 
-// Creo un input sul DOM per prendere il value ogni volta che verrà inserito
-
-// Creo una funzione con math.random per generare un numero casuale da 1 a 5
-
-// Creo una condizione attraverso la quale verranno sommati i due numeri(input e random)
-
-// In base al risultato delle condizioni( un numero pari o dispari) dichiarerò il vincitore
-
 // Variabile che prende l'input #play
 let play = document.getElementById("play");
 
@@ -25,18 +17,36 @@ play.addEventListener("click", function() {
     let pariDispari = document.getElementById("pariDispari").value;
 
     // Variabile che prende il valore inserito dall'utente (Numero)
-    let player = document.getElementById("player").value;
+    let player = parseInt(document.getElementById("player").value);
 
     // Variabile che prende il valore della Funzione( randoNumber() )
     let computer = randoNumber();
+
+    // Somma di valori numerici inseriti da player e computer
+    let somma = player + computer;
 
     // Funzione che crea un numero random da 1 a 5
     function randoNumber() {
         return Math.floor(Math.random() * 5) + 1;          
     }
 
-    console.log( pariDispari)
+    console.log( player + computer)
 
     // Condizioni per decidere chi sarà il vincitore
+    if ( somma % 2 == 0 && pariDispari == "pari" || somma % 2 !== 0 && pariDispari == "dispari" ) {
+
+        document.getElementById("risultato").innerHTML = 
+        `
+        <h3>Complimenti, hai vinto!</h3>
+        <p>La somma dei due numeri è uguale a ${somma}</p>
+        `;
+    } else if ( somma % 2 !== 0 && pariDispari == "pari" || somma % 2 == 0 && pariDispari == "dispari" ) {
+
+        document.getElementById("risultato").innerHTML = 
+        `
+        <h3>Mi dispiace, hai perso!</h3>
+        <p>La somma dei due numeri è uguale a ${somma}</p>
+        `;
+    }
 
 } )
