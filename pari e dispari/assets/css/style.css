@@ -23,9 +23,9 @@ h1 {
 #paper {
 	font-family: "Patrick Hand", cursive;
 	position: relative;
-	line-height: 25px;
-	width: 425px;
-	height: 550px;
+	line-height: 30px;
+	width: 450px;
+	height: 650px;
 	background-color: white;
 	margin: 0 auto;
 	box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
@@ -47,13 +47,13 @@ h1 {
     top: 50px;
     position: relative;
     box-sizing: content-box;
-    height: calc(550px - 50px);
+    height: calc(650px - 50px);
     padding-right: 8px;
     padding-left: 56px;
     background-image: repeating-linear-gradient(
         rgb(255, 255, 255) 0px,
-        white 23.5px,
-        rgba(70, 131, 180, 0.806) 25px
+        white 28.5px,
+        rgba(70, 131, 180, 0.806) 30px
     );
 }
 
@@ -66,19 +66,45 @@ h1 {
     margin: 0;
 }
 
-#paper #lines #risultato {
-    margin-top: 30px;
-}
-
 /* Lista */
 #paper #lines ul {
     margin: 0;
     padding-left: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+#paper #lines #inputs {
+    position: relative;
 }
 
 #paper #lines label {
     display: block;
+}
+
+#paper #lines input#player {
+    border: none;
+    border-bottom: 2px dashed red;
+    outline: none;
+}
+
+#paper #lines input#play {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin-left: 20px;
+    border: 2px solid blue;
+    background-image: repeating-linear-gradient( rgb(255, 255, 255) 0px, white 3px, rgba(70, 131, 180, 0.806) 4px );
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Risultato - output da Javascript */
+#paper #lines #risultato {
+    margin-top: 30px;
+}
+
+#paper #lines #risultato p {
+    margin-top: 35px;
 }
 
 /* Buchi posizionati a destra del container Paper */
